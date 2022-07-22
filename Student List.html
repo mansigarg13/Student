@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/hp/AppData/Local/Temp/Rar$EXa9476.1706/students_new1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="./Student List_files/localweb.css">
+    <link href="./Student List_files/css2" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://cdn5.f-cdn.com/contestentries/1476645/3722903/5c790acfaed94_thumb900.jpg");
+        }
+        .JScreate{
+            width: 50vw;
+            height: 70vh;
+            background-color: black;
+            margin: auto;
+            margin-top: 10vh;
+            border-radius: 50px;
+            color: white;
+            font-family: 'Righteous', cursive;
+            text-align: center;
+            font-size: 20px;
+        }
+        /* #p1{
+            color: white;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="contanier">
+        <div class="web" id="logo">
+            
+            <div id="text">Mansi Garg Creation</div>
+        </div>
+        <div class="web" id="nav">
+            <ul>
+                <li><a href="file:///C:/Users/hp/AppData/Local/Temp/Rar$EXa9476.1706/students_new1.html#" class="active">Home</a></li>
+                <li><a href="file:///C:/Users/hp/AppData/Local/Temp/Rar$EXa9476.1706/students_new1.html#">About</a></li>
+                <li><a href="file:///C:/Users/hp/AppData/Local/Temp/Rar$EXa9476.1706/students_new1.html#">Services</a></li>
+                <li><a href="file:///C:/Users/hp/AppData/Local/Temp/Rar$EXa9476.1706/students_new1.html#">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="web" id="search">
+            <input type="text" class="btn" placeholder="Search Here">
+            <button class="btn">Call us Now</button>
+        </div>
+    </header>
+    <div class="JScreate">
+         <h1 style="color:rgb(123, 123, 218);">Student Details Which You Enter!!</h1>
+         
+          <p id="p1">AJ</p>
+          <p id="p2">IT</p>
+          <p id="p3">A</p> 
+          <p id="p4">26</p>
+          <p id="p5">3</p>
+          <p id="p6">10</p>
+          <p id="p7">10</p>
+          <p id="p8">10</p>
+          <p id="p9">10</p>
+    </div>
+    <script>
+        document.getElementById("p1").innerHTML = localStorage.getItem("name");
+        document.getElementById("p2").innerHTML = localStorage.getItem("branch");
+        document.getElementById("p3").innerHTML = localStorage.getItem("sec");
+        document.getElementById("p4").innerHTML = localStorage.getItem("rollno");
+        document.getElementById("p5").innerHTML = localStorage.getItem("year");
+        document.getElementById("p6").innerHTML = localStorage.getItem("m1");
+        document.getElementById("p7").innerHTML = localStorage.getItem("m2");
+        document.getElementById("p8").innerHTML = localStorage.getItem("m3");
+        document.getElementById("p9").innerHTML = localStorage.getItem("m4");
+
+
+
+
+
+
+
+
+    </script></body></html>

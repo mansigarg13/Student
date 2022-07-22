@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+
+
+    <link rel="stylesheet" href="localweb.css">
+</head>
+
+<body>
+    <header class="contanier">
+        <div class="web" id="logo">
+
+            <div id="text">Mansi Garg Creation </div>
+        </div>
+        <div class="web" id="nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="web" id="search">
+            <input type="text" class="btn" placeholder="Search Here">
+            <button class="btn">Call us Now</button>
+        </div>
+    </header>
+    <form class="form" name="Myform">
+        <h2 id="head">Enter Student Details</h2>
+        <input type="text" id="MyName" name="MyName" placeholder="Enter Your Name" class="cls" value="">
+        <input type="text" id="Branch" name="Branch" placeholder="Enter Your Branch" class="cls">
+        <input type="text" id="Section" name="Section" placeholder="Enter Your Section" class="cls">
+        <input type="number" id="Roll_No" name="Roll_No" placeholder="Enter Your Roll No" class="cls">
+        <input type="text" id="Year" name="Year" placeholder="Enter Your Year" class="cls">
+        <input type="number" id="Marks1" name="Marks1" placeholder="Enter Your Marks in subject 1" class="cls">
+        <input type="number" id="Marks2" name="Marks2" placeholder="Enter Your Marks in subject 2" class="cls">
+        <input type="number" id="Marks3" name="Marks3" placeholder="Enter Your Marks in subject 3" class="cls">
+        <input type="number" id="Marks4" name="Marks4" placeholder="Enter Your Marks in subject 4" class="cls">
+        <input type="submit" value="submit" class="button">
+        <!-- <button class="button"><a class="a" href="view_student_details.html">View Student Details</a></button> -->
+    </form>
+    <script>
+        let click = document.querySelector(".button");
+        // click.addEventListener("click", function name(e) {
+        //     window.open("students_new1.html");
+        //     e.preventDefault();
+        // })
+
+
+        function setData() {
+            let MyName = document.forms["Myform"]["MyName"].value;
+            let Branch = document.forms["Myform"]["Branch"].value;
+            let Section = document.forms["Myform"]["Section"].value;
+            let Roll_No = document.forms["Myform"]["Roll_No"].value;
+            let Year = document.forms["Myform"]["Year"].value;
+            let Marks1 = document.forms["Myform"]["Marks1"].value;
+            let Marks2 = document.forms["Myform"]["Marks2"].value;
+            let Marks3 = document.forms["Myform"]["Marks3"].value;
+            let Marks4 = document.forms["Myform"]["Marks4"].value;
+            if ((MyName !=null || MyName!="") && Branch != "" && Section != "" && Roll_No !="" && Year !="" && Marks1 <100 && Marks2 <100 && Marks3 <100 && Marks4 <100) {
+                localStorage.setItem("name", MyName);
+                localStorage.setItem("branch", Branch);
+                localStorage.setItem("sec", Section);
+                localStorage.setItem("rollno", Roll_No);
+                localStorage.setItem("year", Year);
+                localStorage.setItem("m1", Marks1);
+                localStorage.setItem("m2", Marks2);
+                localStorage.setItem("m3", Marks3);
+                localStorage.setItem("m4", Marks4);
+                window.open("students_new1.html");
+
+            }
+            else {
+                alert("Enter details according to format....Name in Alphabet and marks less than 100");
+            }
+        }
+        click.addEventListener("click", setData);
+        // localStorage.clear();
+
+
+
+
+    </script>
+</body
